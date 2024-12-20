@@ -1,0 +1,93 @@
+body {
+    font-family: initial;
+    background-color: #e9fcf9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centers content vertically */
+  }
+  
+  h1 {
+    color: rgb(4, 6, 50);
+    font-size: 1.8rem; /* Adjusted for better size */
+    font-weight: lighter;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 20px 0;
+    text-align: center; /* Centers the header */
+  }
+  
+  .orders-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: rgb(4, 6, 50);
+    font-weight: normal;
+  }
+  
+  td {
+    background-color: #fff;
+  }
+  
+  button {
+    color: white;
+    background-color: cadetblue;
+    font-size: 16px;
+    padding: 8px 15px;
+    font-weight: 600;
+    border-color: #e9fcf9;
+    margin: 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #007b7f; /* Slightly darker on hover */
+  }
+  
+  .update-btn {
+    background-color: #4CAF50;
+  }
+  
+  .update-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .reassign-btn {
+    background-color: #2196F3; /* Blue color for reassign button */
+  }
+  
+  .reassign-btn:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e53935;
+  }
+  
