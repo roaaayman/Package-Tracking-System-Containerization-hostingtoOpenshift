@@ -746,9 +746,9 @@ func AssignOrder(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	// MongoDB URI
-	const { MongoClient } = require('mongodb');
-	const uri = "mongodb://database:27017/Package_Tracking_System/";
+	uri := "mongodb://database:27017/Package_Tracking_System"
 
+	
 	const client = new MongoClient(uri);
 
 	clientOptions := options.Client().ApplyURI(uri)
