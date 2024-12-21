@@ -748,20 +748,26 @@ func main() {
 	// MongoDB URI
 	uri := "mongodb://database:27017/Package_Tracking_System"
 
-	
-	const client = new MongoClient(uri);
-
+	// MongoDB Client Options
 	clientOptions := options.Client().ApplyURI(uri)
 
 	// Connect to MongoDB
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
 	var err error
-	client, err = mongo.Connect(context.TODO(), clientOptions)
+	client, err = mongo.Connect(ctx, clientOptions)
 	if err != nil {
-		log.Fatal("Connection Error:", err)
+		log.Fatalf("Connection Error: %v", err)
 	}
 
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
+	// Ping the MongoDB database to verify connection
+	err = client.Ping(ctx, nil)
+	if err != nil {
+		log.Fatalf("Ping Error: %v", err)
+	}
+
+	fmt.Println("Connected to MongoDB!")
 
 	// Start the HTTP server
 	const port = ":3000" // Define port for server
