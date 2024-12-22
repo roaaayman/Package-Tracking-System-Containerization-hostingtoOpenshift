@@ -745,7 +745,7 @@ func AssignOrder(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	// MongoDB URI
-	uri := "mongodb://database:27017/Package_Tracking_System"
+	uri := "mongodb+srv://roaaayman2112:1234@cluster0.66yq8.mongodb.net/Package_Tracking_System?retryWrites=true&w=majority"
 
 	// MongoDB Client Options
 	clientOptions := options.Client().ApplyURI(uri)
